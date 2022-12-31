@@ -55,7 +55,17 @@ Editar o arquivo de configuração adicionando a interface de rede do seu sistem
 sudo nano /etc/samba/smb.conf
 ```
 
-O aquivo de configuração deve se paracer com esse, onde em interfaces deve conter o nome e o ip da sua interface de rede:
+Conseguindo o IP da sua interface de rede
+
+```
+ sudo nano /etc/netplan/00-installer-config.yaml
+```
+![image](https://user-images.githubusercontent.com/64742095/210123595-0f7802ab-f11c-4573-9117-9cc7cecfdff1.png)
+
+Em uma tela como essa, a informação que estamos procurando é o nome da interface(ens160), e o endereço IP(10.9.23.109)
+> essas informações são referentes à minha interface de rede, outras máquinas possivelmente terão outros endereços
+
+O aquivo de configuração deve se paracer com esse, onde em interfaces deve conter o nome e o endereço IP da sua interface de rede:
 ```
 [global]
    workgroup = WORKGROUP
